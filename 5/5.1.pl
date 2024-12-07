@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-open my $fh, '<', '5/5.txt' or die $!;
+open my $fh, '<', '5/input-luka.txt' or die $!;
 
 my %orderPages;
 my @pagesGroup;
