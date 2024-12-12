@@ -2,6 +2,7 @@
 use strict;
 use warnings;
 use List::Util qw( sum );
+use Time::HiRes qw( time );
 
 open my $fh, '<', '10/10.txt' or die $!;
 
@@ -63,7 +64,10 @@ sub findNext {
 }
 
 sub main {
+  my $time0 = time();
   print sum( map { findHikingPathScore($_, \@tab) } findZeros(\@tab) );
+  my $time1 = time();
+  printf("\nExecution time: %.5f\n", $time1 - $time0);
 }
 
 main();
