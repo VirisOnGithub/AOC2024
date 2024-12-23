@@ -112,7 +112,7 @@ while (<$fh>) {
     push @robots, [$px, $py, $vx, $vy];
 }
 
-for my $i (0 .. 10403){
+for my $i (1 .. 10403){
   @robots = moveRobots(\@robots);
   if(detectLineOfRobots(\@robots)){
     print "Seconds: $i\n";
